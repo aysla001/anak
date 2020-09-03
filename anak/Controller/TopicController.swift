@@ -60,15 +60,10 @@ class TopicController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            //let cell = super.tableView(tableView, cellForRowAt: indexPath)
+            //let cell = super.tableView(tableView, cellForRowAt: indexPath
+            //     let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SwipeTableViewCell
 
-        // broken line we need to come back to if we want to impliment similar to FlashChat
-            self.tableView.register(UINib(nibName: "TopicCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
-        //tableView.register(UINib(nibName: K.cellNibName, bundle: nil), forCellReuseIdentifier: K.cellIdentifier)
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! TopicCell
-//        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath)
-//            as! MessageCell
-//        cell.label.text = message.body
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "Topic Cell", for: indexPath)
 
 
             if let topic = topics?[indexPath.row]{
@@ -87,6 +82,37 @@ class TopicController: UITableViewController {
             return cell
 
     }
+    
+    //MARK: - TableView Delegate methods
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: "goToItems", sender: self)
+//
+//    }
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let destinationVC = segue.destination as! TodoListViewController
+//
+//        if let indexPath = tableView.indexPathForSelectedRow {
+//            destinationVC.selectedCategory = categories?[indexPath.row]
+//        }
+//
+//    }
+    
+    //MARK: - TableView Delegate methods
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToQuestions", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinvationVC = segue.destination as! QuestionViewController
+        
+        if let indexPath = tableView.indexPathForSelectedRow {
+            destinvationVC.selectedTopic = topics?[indexPath.row]
+        }
+    }
+    
+    
+    
     //MARK: - Data Manipulation Methods
     
     func save (topic: Topic) {

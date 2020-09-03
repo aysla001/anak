@@ -17,6 +17,7 @@
 		57276DF624CEFBC90091AC02 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57276DF524CEFBC90091AC02 /* Topic.swift */; };
 		576AAB0624E5525A003AB11F /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576AAB0424E5525A003AB11F /* TopicCell.swift */; };
 		576AAB0724E5525A003AB11F /* TopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 576AAB0524E5525A003AB11F /* TopicCell.xib */; };
+		57BC0F4324FAC69300B0AD75 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BC0F4224FAC69300B0AD75 /* QuestionViewController.swift */; };
 		57BEC1A924E2B32C00CB6A02 /* TopicsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BEC1A824E2B32C00CB6A02 /* TopicsTableViewController.swift */; };
 		57DB3B5D24D75EE700F9F71B /* TopicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DB3B5C24D75EE700F9F71B /* TopicController.swift */; };
 		FCEFC7C2BFF21C3EC06B37C6 /* Pods_anak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20E6A61E8528CC030336664 /* Pods_anak.framework */; };
@@ -35,6 +36,7 @@
 		57276DF524CEFBC90091AC02 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		576AAB0424E5525A003AB11F /* TopicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
 		576AAB0524E5525A003AB11F /* TopicCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopicCell.xib; sourceTree = "<group>"; };
+		57BC0F4224FAC69300B0AD75 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		57BEC1A824E2B32C00CB6A02 /* TopicsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsTableViewController.swift; sourceTree = "<group>"; };
 		57DB3B5C24D75EE700F9F71B /* TopicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicController.swift; sourceTree = "<group>"; };
 		83BC8B409E457FB10DBD4E90 /* Pods-anak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-anak.debug.xcconfig"; path = "Target Support Files/Pods-anak/Pods-anak.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				57BEC1A824E2B32C00CB6A02 /* TopicsTableViewController.swift */,
 				57086DD22447272300CA52F0 /* SceneDelegate.swift */,
 				57DB3B5C24D75EE700F9F71B /* TopicController.swift */,
+				57BC0F4224FAC69300B0AD75 /* QuestionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				57086DD12447272300CA52F0 /* AppDelegate.swift in Sources */,
 				57086DD32447272300CA52F0 /* SceneDelegate.swift in Sources */,
 				57BEC1A924E2B32C00CB6A02 /* TopicsTableViewController.swift in Sources */,
+				57BC0F4324FAC69300B0AD75 /* QuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
