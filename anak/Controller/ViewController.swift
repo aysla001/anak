@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        loadTopics()
+        //loadTopics()
 
     }
 
@@ -68,17 +68,17 @@ class ViewController: UIViewController {
     }
     
     
-    
-    @IBAction func ViewTopicsTableView(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "ViewTopicsTableView", sender: self)
-    }
-    
-    
-    @IBAction func ViewTopicsPressed(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "ViewTopics", sender: self)
-    }
-    
 
+    @IBAction func UIViewControllerButtonPressed(_ sender: UIButton) {
+        
+         self.performSegue(withIdentifier: "UIViewControllerSegue", sender: self)
+    }
+    
+    @IBAction func UITableViewControllerPressed(_ sender: UIButton) {
+         self.performSegue(withIdentifier: "UITableViewControllerSegue", sender: self)
+
+    }
+    
 }
 
 

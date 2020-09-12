@@ -29,21 +29,20 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="g2M-ih-cxi"/>
                                 </connections>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3R-ap-VVM">
-                                <rect key="frame" x="167" y="235" width="248" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="View Topics (UITableViewController)"/>
-                                <connections>
-                                    <segue destination="TGz-vg-eG3" kind="show" identifier="ViewTopics" id="xGw-J9-MiJ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4B-wb-KOi">
                                 <rect key="frame" x="174" y="197" width="234" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="View Topics (UIViewController)"/>
                                 <connections>
-                                    <action selector="ViewTopicsTableView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FtD-OU-8vm"/>
-                                    <segue destination="QZx-U2-CUg" kind="show" identifier="ViewTopicsTableView" id="4Fx-Um-w5h"/>
+                                    <segue destination="QZx-U2-CUg" kind="show" identifier="UIViewControllerSegue" id="otj-wl-As1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3R-ap-VVM">
+                                <rect key="frame" x="167" y="235" width="248" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="View Topics (UITableViewController)"/>
+                                <connections>
+                                    <segue destination="TGz-vg-eG3" kind="show" identifier="UITableViewControllerSegue" id="dYe-kb-40H"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="r2u-DH-JPx">
@@ -67,16 +66,16 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
         </scene>
-        <!--Topics Table View Controller-->
+        <!--TopicsUI View Controller-->
         <scene sceneID="g53-mt-s7L">
             <objects>
-                <viewController id="QZx-U2-CUg" customClass="TopicsTableViewController" customModule="anak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QZx-U2-CUg" customClass="TopicsUIViewController" customModule="anak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iJv-us-3x0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9p9-KK-j2s">
-                                <rect key="frame" x="0.0" y="238" width="414" height="390"/>
+                                <rect key="frame" x="0.0" y="127" width="414" height="679"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
@@ -86,7 +85,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="I7B-8l-D11"/>
                     <connections>
-                        <outlet property="AccordionTableView" destination="9p9-KK-j2s" id="NB5-4v-3Qt"/>
+                        <outlet property="tableView" destination="9p9-KK-j2s" id="AYm-8l-HJu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KdJ-3d-SNq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
